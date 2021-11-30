@@ -61,5 +61,26 @@ namespace PadelTest
             Assert.Equal(expected, result);
 
         }
+        [Fact]
+        public void Game_BothPlayersAt40_Player1Wins()
+        {
+            Player player1 = new Player("Player 1");
+            Player player2 = new Player("Player 2");
+
+            var game = new Game(player1, player2);
+            game.Point(player1); // 15 - 0
+            game.Point(player1); // 30 - 0
+            game.Point(player2); // 30 - 15
+            game.Point(player1); // 40 - 15
+            game.Point(player2); // 40 - 30
+            game.Point(player2); // 40 - 40
+            game.Point(player1); // Fördel Player 1
+            game.Point(player1); // Player 1 Wins
+
+            var result = game.ScoreString(); // Ska vara Player 1 wins Game
+            string expected = "Player 1 wins";
+
+            Assert.Equal(expected, result);
+        }
     }
 }
