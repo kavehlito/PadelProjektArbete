@@ -6,7 +6,7 @@
         private Player _player1;
         private Player _player2;
 
-        public Player player1 => player1;
+        public Player player1 => _player1;
         public Player player2 => _player2;
 
         public Game(Player player1, Player player2)
