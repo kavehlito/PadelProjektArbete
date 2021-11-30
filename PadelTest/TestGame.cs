@@ -4,7 +4,7 @@ using Padel;
 
 namespace PadelTest
 {
-    public class UnitTest1
+    public class TestGame
     {
         [Fact]
         public void Test1()
