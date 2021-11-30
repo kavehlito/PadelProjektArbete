@@ -6,7 +6,7 @@ using Padel;
 
 namespace PadelTest
 {
-    class TestPlayer
+    public class TestPlayer
     {
 
         [Fact]

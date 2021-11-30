@@ -6,7 +6,7 @@ using Padel;
 
 namespace PadelTest
 {
-    class TestScore
+    public class TestScore
     {
     }
 }
