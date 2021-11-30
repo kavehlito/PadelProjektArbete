@@ -11,7 +11,7 @@ namespace Padel
         public Game(Player player1, Player player2)
         {
             _player1 = player1;
-            _player1 = player2;
+            _player2 = player2;
         }
 
         public void Point(Player player)
