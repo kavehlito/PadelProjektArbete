@@ -16,7 +16,7 @@ namespace PadelTest
             var player2 = new Player("player2");
 
             Assert.Equal("player1", player1.Name);
-            Assert.Equal("player1", player2.Name);
+            Assert.Equal("player2", player2.Name);
         }
     }
 }

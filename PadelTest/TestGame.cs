@@ -18,6 +18,17 @@ namespace PadelTest
         }
 
         [Fact]
+        public void Winner_Init_IsNull()
+        {
+            Player player1 = new Player("Player 1");
+            Player player2 = new Player("Player 2");
+
+            Game game = new Game(player1, player2);
+
+            Assert.Null(game.Winner);
+        }
+
+        [Fact]
         public void Score_Init_IsZero()
         {
             Player player1 = new Player("Player 1");
@@ -59,6 +70,7 @@ namespace PadelTest
             string expected = "Player 1 wins";
 
             Assert.Equal(expected, result);
+            Assert.Equal("Player 1", game.Winner.Name);
 
         }
     }
