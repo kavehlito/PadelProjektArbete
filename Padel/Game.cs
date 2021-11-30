@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Padel
+﻿namespace Padel
 {
 
     public class Game
@@ -16,21 +14,27 @@ namespace Padel
 
         public void Point(Player player)
         {
-            _player1.Point();
+            player.Point();
         }
 
-        public Score Score()
+        public Score Score(Player player)
         {
-            return _player1.Score;
+            return player.Score;
         }
 
         public string ScoreString()
         {
-            if (_player1.Score._Score > 4)
+            if (_player1.Score._Score > 4 &&
+                _player1.Score._Score >= _player2.Score._Score + 2)
             {
                 return "Player 1 wins";
             }
-            return "Player 2 wins";
+            if (_player2.Score._Score > 4 &&
+                _player2.Score._Score >= _player1.Score._Score + 2)
+            {
+                return "Player 2 wins";
+            }
+            return "Game is not over yet";
         }
     }
 }
