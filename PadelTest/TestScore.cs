@@ -9,6 +9,11 @@ namespace PadelTest
     public class TestScore
     {
         // testa när initierar score- är den null?
+        [Fact]
+        public void Initiate_Score()
+        {
+            
+        }
 
         [Fact]
         public void Does_Score_Increase()

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Padel;
+using System;
 using Xunit;
-using Padel;
 
 namespace PadelTest
 {
@@ -18,7 +16,29 @@ namespace PadelTest
             Assert.Equal("player2", player2.Name);
         }
 
-        // testa vad som händer om man skriver in tom name
-        // testa att score hänger med namn på player
+        [Fact]  // testa att score hänger med namn på player
+        public void Player_ScoreFollow_PlayerName()
+        {
+            Player player1 = new Player("player1");
+            Player player2 = new Player("player2");
+
+            player1.Score.Increase();
+            player2.Score.Increase();
+
+            Assert.Equal(1, player1.Score._Score);
+            Assert.Equal(1, player2.Score._Score);
+        }
+
+        [Fact]
+        public void Player_Name_IsNull()
+        {
+            Action act = () => new Player(" "); 
+            Assert.Throws<ArgumentException>(act);
+
+
+            Action act1 = () => new Player(null); 
+            Assert.Throws<ArgumentException>(act1);
+            
+        }
     }
 }
