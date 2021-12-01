@@ -5,6 +5,7 @@ namespace Padel
 {
     public class Match
     {
+        /*
         List<Set> _sets;
         public Player _player1;
         public Player _player2;
@@ -28,5 +29,7 @@ namespace Padel
         {
             return new Score();
         }
+        */
     }
+
 }
