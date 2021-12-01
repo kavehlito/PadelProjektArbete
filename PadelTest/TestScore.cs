@@ -8,5 +8,13 @@ namespace PadelTest
 {
     public class TestScore
     {
+        [Fact]
+        public void Does_Score_Increase()
+        {
+            var score = new Score();
+            score.Increase();
+
+            Assert.Equal(1, score._Score);
+        }
     }
 }
