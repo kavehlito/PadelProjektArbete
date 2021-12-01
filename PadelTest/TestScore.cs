@@ -12,7 +12,8 @@ namespace PadelTest
         [Fact]
         public void Initiate_Score()
         {
-            
+            Score firstScore = new Score();
+            Assert.Equal(0, firstScore._Score);
         }
 
         [Fact]
