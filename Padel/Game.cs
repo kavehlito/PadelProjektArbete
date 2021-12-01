@@ -40,24 +40,14 @@
         public string ScoreString()
         {
 
-            if (_Player1.Score._Score == 4 &&
-                _Player1.Score._Score >= _Player2.Score._Score + 1)
+            if (_Player1.Score._Score >= 4 &&
+                _Player1.Score._Score >= _Player2.Score._Score + 2)
             {
                 _Winner = Player1;
                 return "Player 1 wins";
             }
-            if (_Player2.Score._Score == 4 &&
-                _Player2.Score._Score >= _Player1.Score._Score + 1)
-            {
-                _Winner = Player2;
-                return "Player 2 wins";
-            }
-            if(_Player1.Score._Score > 4 && _Player1.Score._Score >= _Player2.Score._Score + 2)
-            {
-                _Winner = Player1;
-                return "Player 1 wins";
-            }
-            if (_Player2.Score._Score > 4 && _Player2.Score._Score >= _Player1.Score._Score + 2)
+            if (_Player2.Score._Score >= 4 &&
+                _Player2.Score._Score >= _Player1.Score._Score + 2)
             {
                 _Winner = Player2;
                 return "Player 2 wins";
