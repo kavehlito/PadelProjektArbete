@@ -62,7 +62,8 @@ namespace PadelTest
             mySet[0].Point(player1); 
             mySet[0].Point(player2); 
             mySet[0].Point(player2); 
-            mySet[0].Point(player2); 
+            mySet[0].Point(player2);
+            mySet[0].Point(player2);
 
             mySet[1].Point(player1); 
             mySet[1].Point(player2); 
@@ -87,6 +88,8 @@ namespace PadelTest
             mySet[4].Point(player2); 
             mySet[4].Point(player2); 
             mySet[4].Point(player2); 
+
+            
 
 
             Assert.Equal(0, mySet.Points(player1));
