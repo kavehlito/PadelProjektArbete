@@ -5,7 +5,7 @@ namespace Padel
     public class Match
     {
 
-        List<Set> _sets;
+        public List<Set> _sets;
         public Player _player1;
         public Player _player2;
         public Match(int numberOfSets, Player player1, Player player2)
