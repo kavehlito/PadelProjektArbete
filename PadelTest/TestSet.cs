@@ -97,12 +97,17 @@ namespace PadelTest
         }
 
         [Fact]
-        public void Point_In_Game()
+        public void Set_Game_Indexer()
         {
             Player player1 = new Player("player1");
             Player player2 = new Player("player2");
 
-          //  _games.Point(player1);
+            Set set1 = new Set(3, player1, player2);
+            set1[0] = new Game(player1, player2);
+
+            Assert.NotNull(set1[0]);
+            Assert.Equal(player1, set1[0].Player1);
+            Assert.Equal(player2, set1[0].Player2);
 
         }
     }
