@@ -8,7 +8,6 @@ namespace PadelTest
 {
     public class TestPlayer
     {
-
         [Fact]
         public void Name_Player()
         {
@@ -18,5 +17,8 @@ namespace PadelTest
             Assert.Equal("player1", player1.Name);
             Assert.Equal("player2", player2.Name);
         }
+
+        // testa vad som händer om man skriver in tom name
+        // testa att score hänger med namn på player
     }
 }

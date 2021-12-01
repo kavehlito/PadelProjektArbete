@@ -8,8 +8,6 @@ namespace PadelTest
 {
     public class TestSet
     {
-
-
         [Fact]
         public void Set_Init3_NoPoints()
         {
@@ -52,6 +50,48 @@ namespace PadelTest
             Assert.Equal(0, mySet.Points(player2));
         }
 
+        [Fact]
+        public void Set_Simulate5Games_Player2Wins()
+        {
+            Player player1 = new Player("Player 1");
+            Player player2 = new Player("Player 2");
+
+            Set mySet = new Set(5, player1, player2);
+
+            mySet[0].Point(player1); 
+            mySet[0].Point(player1); 
+            mySet[0].Point(player2); 
+            mySet[0].Point(player2); 
+            mySet[0].Point(player2); 
+
+            mySet[1].Point(player1); 
+            mySet[1].Point(player2); 
+            mySet[1].Point(player2); 
+            mySet[1].Point(player2); 
+            mySet[1].Point(player2); 
+
+            mySet[2].Point(player1); 
+            mySet[2].Point(player2); 
+            mySet[2].Point(player2); 
+            mySet[2].Point(player2); 
+            mySet[2].Point(player2); 
+
+            mySet[3].Point(player1); 
+            mySet[3].Point(player2); 
+            mySet[3].Point(player2); 
+            mySet[3].Point(player2); 
+            mySet[3].Point(player2); 
+
+            mySet[4].Point(player1); 
+            mySet[4].Point(player2); 
+            mySet[4].Point(player2); 
+            mySet[4].Point(player2); 
+            mySet[4].Point(player2); 
+
+
+            Assert.Equal(0, mySet.Points(player1));
+            Assert.Equal(5, mySet.Points(player2));
+        }
 
         [Fact]
         public void Point_In_Game()
@@ -62,7 +102,5 @@ namespace PadelTest
           //  _games.Point(player1);
 
         }
-
-
     }
 }
