@@ -8,21 +8,28 @@ namespace PadelTest
 {
     public class TestScore
     {
-        // testa när initierar score- är den null?
         [Fact]
-        public void Initiate_Score()
+        public void ScoreField_Init()
         {
             Score firstScore = new Score();
             Assert.Equal(0, firstScore._Score);
         }
 
         [Fact]
-        public void Does_Score_Increase()
+        public void ScoreMethod_Increase()
         {
             var score = new Score();
             score.Increase();
 
             Assert.Equal(1, score._Score);
+        }
+
+        [Fact]
+        public void ScoreClass_Init()
+        {
+            Score firstScore = new Score();
+
+            Assert.NotNull(firstScore);
         }
     }
 }
