@@ -34,11 +34,11 @@ namespace Padel
             int pointDifference1 = Point(_Player1) - Point(_Player2);
             int pointDifference2 = Point(_Player2) - Point(_Player1);
 
-            if (pointDifference1 > pointDifference2)
+            if (pointDifference1 > pointDifference2 && Point(_Player1) >= 3)
             {
                 return $"{_Player1.Name} wins {Point(_Player1)}-{Point(_Player2)}";
             }
-            else if (pointDifference1 < pointDifference2)
+            else if (pointDifference1 < pointDifference2 && Point(_Player2) >= 3)
             {
                 return $"{_Player2.Name} wins {Point(_Player1)}-{Point(_Player2)}";
             }
