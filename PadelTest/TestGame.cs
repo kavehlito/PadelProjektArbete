@@ -107,6 +107,22 @@ namespace PadelTest
         }
 
         [Fact]
+        public void Game_RunAGame_GameNotFinished()
+        {
+            //Exempel på användning:
+            Player player1 = new Player("Player 1");
+            Player player2 = new Player("Player 2");
+
+            var game = new Game(player1, player2);
+            game.Point(player2); // 0 - 15
+
+            var result = game.ScoreString(); // Ska vara Game is not over yet
+            string expected = "Game is not over yet";
+
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
         public void Game_BothPlayersAt40_Player1Wins()
         {
             Player player1 = new Player("Player 1");
