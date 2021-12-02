@@ -32,11 +32,11 @@ namespace PadelTest
         [Fact]
         public void Player_Name_IsNull()
         {
-            Action act = () => new Player(" "); 
+            static void act() => new Player(" ");
             Assert.Throws<ArgumentException>(act);
 
 
-            Action act1 = () => new Player(null); 
+            static void act1() => new Player(null);
             Assert.Throws<ArgumentException>(act1);
             
         }

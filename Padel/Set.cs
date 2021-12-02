@@ -5,7 +5,7 @@ namespace Padel
 {
     public class Set
     {
-        private List<Game> _games = new List<Game>();
+        private readonly List<Game> _games = new List<Game>();
 
         //Constructor added to initialize games and players
         public Set(int nrOfSets, Player player1, Player player2)

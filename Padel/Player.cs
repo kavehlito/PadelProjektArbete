@@ -14,9 +14,11 @@ namespace Padel
             {
                 throw new ArgumentException("Cannot be empty");
             }
-           
-            this.Score = new Score();
-            this.Score._Score = 0;
+
+            Score = new Score
+            {
+                _Score = 0
+            };
             Name = name;
         }
         
