@@ -11,46 +11,46 @@ namespace PadelTest
         [Fact]
         public void Match_CreateMatch()
         {
-            Player player1 = new Player("Player1");
-            Player player2 = new Player("Player2");
-            Match match = new Match(5, player1, player2);
+            Player player1 = new Player("Player 1");
+            Player player2 = new Player("Player 2");
+            Set mySet = new Set(5, player1, player2);
+            Match match = new Match(mySet);
 
-            Assert.Equal("Player1", player1.Name);
-            Assert.Equal("Player2", player2.Name);
-            Assert.Equal(5, match._sets.Count);
+            Assert.NotNull(match);
+            Assert.NotNull(match._Player1);
+            Assert.NotNull(match._Player2);
         }
 
         [Fact]
-        public void Match_Player1_WinSet()
+        public void Match_Player1_WinMatch()
         {
-            Player player1 = new Player("Player1");
-            Player player2 = new Player("Player2");
-            Match match = new Match(3, player1, player2);
+            Player player1 = new Player("Player 1");
+            Player player2 = new Player("Player 2");
+            Set mySet = new Set(3, player1, player2);
+            Match match = new Match(mySet);
 
-            match.Point(player1);
-            match.Point(player1);
-            match.Point(player1);
-            match.Point(player2);
-            match.Point(player1);
+            match[0].Point(player1); // 15 - 0
+            match[0].Point(player1); // 30 - 0
+            match[0].Point(player2); // 30 - 15
+            match[0].Point(player1); // 40 - 15
+            match[0].Point(player1); // Player 1 vinner Gamet
 
-            match.Point(player1);
-            match.Point(player1);
-            match.Point(player1);
-            match.Point(player2);
-            match.Point(player1);
+            match[1].Point(player1); // 15 - 0
+            match[1].Point(player1); // 30 - 0
+            match[1].Point(player2); // 30 - 15
+            match[1].Point(player1); // 40 - 15
+            match[1].Point(player1); // Player 1 vinner Gamet
 
-            match.Point(player1);
-            match.Point(player1);
-            match.Point(player1);
-            match.Point(player2);
-            match.Point(player1);
+            match[2].Point(player1); // 15 - 0
+            match[2].Point(player1); // 30 - 0
+            match[2].Point(player2); // 30 - 15
+            match[2].Point(player1); // 40 - 15
+            match[2].Point(player1); // Player 1 vinner Gamet
 
-            
-        }
-        [Fact]
-        public void Match_MatchScore_GetMatchScore()
-        {
 
+            string expected = $"{player1.Name} wins 3-0";
+
+            Assert.Equal(expected, match.MatchScore());
         }
     }
 }

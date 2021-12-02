@@ -5,30 +5,45 @@ namespace Padel
     public class Match
     {
 
-       public List<Set> _sets;
-        public Player _player1;
-        public Player _player2;
-        public Match(int numberOfSets, Player player1, Player player2)
+        private readonly List<Game> _Games = new List<Game>();
+        public Player _Player1;
+        public Player _Player2;
+        private readonly Set _Set;
+        public Match(Set set)
         {
+            this._Set = set;
+            this._Player1 = set._Player1;
+            this._Player2 = set._Player2;
+            this._Games = set._Games;
+        }
 
-            _sets = new List<Set>(numberOfSets);
-            for (int i = 0; i < numberOfSets; i++)
+        //Indexer was added to access the private List<Game>
+        public Game this[int i]
+        {
+            get { return _Games[i]; }
+            set { _Games[i] = value; }
+        }
+
+        public int Point(Player player)
+        {
+            return _Set.Points(player);
+        }
+
+        public string MatchScore()
+        {
+            int pointDifference1 = Point(_Player1) - Point(_Player2);
+            int pointDifference2 = Point(_Player2) - Point(_Player1);
+
+            if (pointDifference1 > pointDifference2)
             {
-                _sets.Add(new Set(5, player1, player2));
+                return $"{_Player1.Name} wins {Point(_Player1)}-{Point(_Player2)}";
             }
-            _player1 = player1;
-            _player2 = player2;
-
-        }
-
-        public void Point(Player player)
-        {
-            _sets[0].Points(player);
-        }
-
-        public Score MatchScore()
-        {
-            return new Score();
+            else if (pointDifference1 < pointDifference2)
+            {
+                return $"{_Player2.Name} wins {Point(_Player1)}-{Point(_Player2)}";
+            }
+            else
+                return "Match is not over yet";
         }
 
     }
