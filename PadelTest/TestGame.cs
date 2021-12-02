@@ -14,6 +14,7 @@ namespace PadelTest
 
             Game game = new Game(player1, player2);
 
+            Assert.NotNull(game);
             Assert.NotNull(game.Player1);
             Assert.NotNull(game.Player2);
         }

@@ -7,6 +7,14 @@ namespace PadelTest
     public class TestPlayer
     {
         [Fact]
+        public void Player_Init_NotNull()
+        {
+            var player = new Player("player");
+
+            Assert.NotNull(player);
+        }
+
+        [Fact]
         public void Name_Player()
         {
             var player1 = new Player("player1");
