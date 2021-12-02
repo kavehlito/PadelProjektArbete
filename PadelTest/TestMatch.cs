@@ -130,18 +130,11 @@ namespace PadelTest
             match[1].Point(player2); // 15 - 40
             match[1].Point(player2); // Player 2 vinner Gamet
 
-            match[2].Point(player1); // 15 - 0
-            match[2].Point(player2); // 15 - 15
-            match[2].Point(player2); // 15 - 30
-            match[2].Point(player2); // 15 - 40*/
-            
-
 
             string expected = $"Match is not over yet";
 
             Assert.Equal(expected, match.MatchScore());
         }
-
         [Fact]
         public void Match_NoWinner_MatchNotover()
         {
@@ -169,6 +162,49 @@ namespace PadelTest
             string expected = $"Match is not over yet";
 
             Assert.Equal(expected, match.MatchScore());
+        }
+
+        [Fact]
+        public void Match_SkippedFirstMatch_NoWinner()
+        {
+            Player player1 = new Player("Player 1");
+            Player player2 = new Player("Player 2");
+            Set mySet = new Set(3, player1, player2);
+            Match match = new Match(mySet);
+
+            match[1].Point(player1); // 15 - 0
+            match[1].Point(player2); // 15 - 15
+            match[1].Point(player2); // 15 - 30
+            match[1].Point(player2); // 15 - 40
+            match[1].Point(player2); // Player 2 Wins
+
+            match[2].Point(player1); // 15 - 0
+            match[2].Point(player2); // 15 - 15
+            match[2].Point(player2); // 15 - 30
+            match[2].Point(player2); // 15 - 40
+            match[2].Point(player2); // Player 2 Wins
+
+            string expected = $"Match is not over yet";
+
+            Assert.Equal(expected, match.MatchScore());
+        }
+
+        [Fact]
+        public void Match_PlayerScore_ReturnPoints()
+        {
+            Player player1 = new Player("Player 1");
+            Player player2 = new Player("Player 2");
+            Set mySet = new Set(3, player1, player2);
+            Match match = new Match(mySet);
+
+            match[1].Point(player1); // 15 - 0
+            match[1].Point(player2); // 15 - 15
+            match[1].Point(player2); // 15 - 30
+            match[1].Point(player2); // 15 - 40
+            match[1].Point(player2); // Player 2 Wins
+
+            Assert.Equal(1, player1.Score._Score);
+            Assert.Equal(4, player2.Score._Score);
         }
     }
 }
