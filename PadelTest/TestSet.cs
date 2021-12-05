@@ -9,7 +9,7 @@ namespace PadelTest
     public class TestSet
     {
         [Fact]
-        public void Set_Init3_NoPoints()
+        public void Set_Init3_ZeroPoints()
         {
             Player player1 = new Player("Player 1");
             Player player2 = new Player("Player 2");
@@ -97,7 +97,7 @@ namespace PadelTest
         }
 
         [Fact]
-        public void Set_Game_Indexer()
+        public void Indexer_Init_ShouldBeAGame()
         {
             Player player1 = new Player("player1");
             Player player2 = new Player("player2");

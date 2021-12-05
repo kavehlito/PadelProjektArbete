@@ -19,7 +19,20 @@ namespace PadelTest
         }
 
         [Fact]
-        public void Match_Player1_WinMatch()
+        public void Match_Init_IndexerNotNull()
+        {
+            Player player1 = new Player("Player 1");
+            Player player2 = new Player("Player 2");
+            Set mySet = new Set(3, player1, player2);
+            Match match = new Match(mySet);
+            Game newGame = new Game(player1, player2);
+            match[0] = newGame;
+            Assert.NotNull(mySet[0]);
+            Assert.Equal(newGame, match[0]);
+        }
+
+        [Fact]
+        public void Match_Player1WinsMatch()
         {
             Player player1 = new Player("Player 1");
             Player player2 = new Player("Player 2");
@@ -50,20 +63,9 @@ namespace PadelTest
             Assert.Equal(expected, match.MatchScore());
         }
 
+
         [Fact]
-        public void Match_Game_Indexer()
-        {
-            Player player1 = new Player("Player 1");
-            Player player2 = new Player("Player 2");
-            Set mySet = new Set(3, player1, player2);
-            Match match = new Match(mySet);
-            Game newGame = new Game(player1, player2);
-            match[0] = newGame;
-            Assert.NotNull(mySet[0]);
-            Assert.Equal(newGame, match[0]);
-        }
-        [Fact]
-        public void Match_Player2_WinsMatch()
+        public void Match_Player2WinsMatch()
         {
             Player player1 = new Player("Player 1");
             Player player2 = new Player("Player 2");
@@ -94,7 +96,7 @@ namespace PadelTest
             Assert.Equal(expected, match.MatchScore());
         }
         [Fact]
-        public void Match_NoWinner_MatchNotOver()
+        public void Match_FirstSetUnfinished_MatchNotOver()
         {
             Player player1 = new Player("Player 1");
             Player player2 = new Player("Player 2");
@@ -136,7 +138,7 @@ namespace PadelTest
             Assert.Equal(expected, match.MatchScore());
         }
         [Fact]
-        public void Match_NoWinner_MatchNotover()
+        public void Match_MultipleUnfinishedSets_MatchNotover()
         {
             Player player1 = new Player("Player 1");
             Player player2 = new Player("Player 2");

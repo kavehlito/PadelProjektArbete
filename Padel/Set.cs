@@ -5,17 +5,21 @@ namespace Padel
 {
     public class Set
     {
+        //Changed name of field from _games to _Games to conform with naming conventions
         public List<Game> _Games = new List<Game>();
+
+        //Added fields representing the players.
         public Player _Player1;
         public Player _Player2;
 
-        //Constructor added to initialize games and players
+        //Constructor added to initialize games and players.
         public Set(int nrOfSets, Player player1, Player player2)
         {
             this._Player1 = player1;
             this._Player2 = player2;
 
-            for(int i = 0; i < nrOfSets; i++)
+            //Looping over the number of sets to initialize the corresponding number of games, then add the games to the list of games.
+            for (int i = 0; i < nrOfSets; i++)
             {
                 Game newGame = new Game(player1, player2);
                 _Games.Add(newGame);
@@ -30,7 +34,9 @@ namespace Padel
         }
         
 
-        //Changed to count points depending on number of winning games
+        //Changed to count points depending on number of winning games.
+        //Would originally only add points to the first game in the list of games.
+        //Changed method name for clarity.
         public int Points(Player player)
         {
             int points = 0;

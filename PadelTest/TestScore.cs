@@ -9,14 +9,14 @@ namespace PadelTest
     public class TestScore
     {
         [Fact]
-        public void ScoreField_Init()
+        public void Score_Init_ShouldBeZero()
         {
             Score firstScore = new Score();
             Assert.Equal(0, firstScore._Score);
         }
 
         [Fact]
-        public void ScoreMethod_Increase()
+        public void Increase_IncreaseOnce_ShouldBeOne()
         {
             var score = new Score();
             score.Increase();
@@ -25,7 +25,7 @@ namespace PadelTest
         }
 
         [Fact]
-        public void ScoreClass_Init()
+        public void ScoreClass_Init_NotNull()
         {
             Score firstScore = new Score();
 

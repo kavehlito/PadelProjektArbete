@@ -15,7 +15,7 @@ namespace PadelTest
         }
 
         [Fact]
-        public void Name_Player()
+        public void Name_Init_Correctly()
         {
             var player1 = new Player("player1");
             var player2 = new Player("player2");
@@ -25,7 +25,7 @@ namespace PadelTest
         }
 
         [Fact]  // testa att score hänger med namn på player
-        public void Player_ScoreFollow_PlayerName()
+        public void Player_IncreaseScore_ShouldIncrease()
         {
             Player player1 = new Player("player1");
             Player player2 = new Player("player2");
@@ -38,7 +38,7 @@ namespace PadelTest
         }
 
         [Fact]
-        public void Player_Name_IsNull()
+        public void Player_NameIsNull_ShouldThrow()
         {
             static void act() => new Player(" ");
             Assert.Throws<ArgumentException>(act);
