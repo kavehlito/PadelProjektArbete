@@ -132,6 +132,10 @@ namespace PadelTest
             match[1].Point(player2); // 15 - 40
             match[1].Point(player2); // Player 2 vinner Gamet
 
+            match[2].Point(player1); // 15 - 0
+            match[2].Point(player2); // 15 - 15
+            match[2].Point(player2); // 15 - 30
+
 
             string expected = $"Match is not over yet";
 
