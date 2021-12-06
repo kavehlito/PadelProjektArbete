@@ -16,12 +16,13 @@ namespace Padel
         public Set(int nrOfSets, Player player1, Player player2)
         {
             this._Player1 = new Player(player1.Name);
-            this._Player2 = new Player(player2.Name);
+            this._Player2 = new Player(player2.Name); 
 
             //Looping over the number of sets to initialize the corresponding number of games, then add the games to the list of games.
             for (int i = 0; i < nrOfSets; i++)
             {
-                Game newGame = new Game(_Player1, _Player2);
+
+                Game newGame = new Game(new Player(player1.Name), new Player(player2.Name));
                 _Games.Add(newGame);
             }
         }

@@ -19,8 +19,8 @@
         //Added constructor to force the assignment of initial values.
         public Game(Player player1, Player player2)
         {
-            _Player1 = new Player(player1.Name);
-            _Player2 = new Player(player2.Name);
+            _Player1 = player1;
+            _Player2 = player2;
 
         }
 
