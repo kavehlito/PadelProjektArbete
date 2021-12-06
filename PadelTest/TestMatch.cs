@@ -113,7 +113,7 @@ namespace PadelTest
             Assert.Equal(expected, match.MatchScore());
         }
         [Fact]
-        public void Match_TwoGames_MatchNotOver()
+        public void Match_ThirdMatchNotOver_MatchNotOver()
         {
             Player player1 = new Player("Player 1");
             Player player2 = new Player("Player 2");
