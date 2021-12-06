@@ -120,21 +120,21 @@ namespace PadelTest
             Set mySet = new Set(3, player1, player2);
             Match match = new Match(mySet);
 
-            match[0].Point(player1); // 15 - 0
-            match[0].Point(player2); // 15 - 15
-            match[0].Point(player2); // 15 - 30
-            match[0].Point(player2); // 15 - 40
-            match[0].Point(player2); // Player 2 vinner Gamet
+            match[0].Point(match[0].Player1); // 15 - 0
+            match[0].Point(match[0].Player2); // 15 - 15
+            match[0].Point(match[0].Player2); // 15 - 30
+            match[0].Point(match[0].Player2); // 15 - 40
+            match[0].Point(match[0].Player2); // Player 2 vinner Gamet
 
-            match[1].Point(player1); // 15 - 0
-            match[1].Point(player2); // 15 - 15
-            match[1].Point(player2); // 15 - 30
-            match[1].Point(player2); // 15 - 40
-            match[1].Point(player2); // Player 2 vinner Gamet
+            match[1].Point(match[1].Player1); // 15 - 0
+            match[1].Point(match[1].Player2); // 15 - 15
+            match[1].Point(match[1].Player2); // 15 - 30
+            match[1].Point(match[1].Player2); // 15 - 40
+            match[1].Point(match[1].Player2); // Player 2 vinner Gamet
 
-            match[2].Point(player1); // 15 - 0
-            match[2].Point(player2); // 15 - 15
-            match[2].Point(player2); // 15 - 30
+            match[2].Point(match[2].Player1); // 15 - 0
+            match[2].Point(match[2].Player2); // 15 - 15
+            match[2].Point(match[2].Player2); // 15 - 30
 
 
             string expected = $"Match is not over yet";
@@ -149,20 +149,20 @@ namespace PadelTest
             Set mySet = new Set(3, player1, player2);
             Match match = new Match(mySet);
 
-            match[0].Point(player1); // 15 - 0
-            match[0].Point(player2); // 15 - 15
-            match[0].Point(player2); // 15 - 30
-            match[0].Point(player2); // 15 - 40
+            match[0].Point(match[0].Player1); // 15 - 0
+            match[0].Point(match[0].Player2); // 15 - 15
+            match[0].Point(match[0].Player2); // 15 - 30
+            match[0].Point(match[0].Player2); // 15 - 40
 
-            match[1].Point(player1); // 15 - 0
-            match[1].Point(player2); // 15 - 15
-            match[1].Point(player2); // 15 - 30
-            match[1].Point(player2); // 15 - 40
+            match[1].Point(match[1].Player1); // 15 - 0
+            match[1].Point(match[1].Player2); // 15 - 15
+            match[1].Point(match[1].Player2); // 15 - 30
+            match[1].Point(match[1].Player2); // 15 - 40
 
-            match[2].Point(player1); // 15 - 0
-            match[2].Point(player2); // 15 - 15
-            match[2].Point(player2); // 15 - 30
-            match[2].Point(player2); // 15 - 40
+            match[2].Point(match[2].Player1); // 15 - 0
+            match[2].Point(match[2].Player2); // 15 - 15
+            match[2].Point(match[2].Player2); // 15 - 30
+            match[2].Point(match[2].Player2); // 15 - 40
 
 
             string expected = $"Match is not over yet";
@@ -178,17 +178,17 @@ namespace PadelTest
             Set mySet = new Set(3, player1, player2);
             Match match = new Match(mySet);
 
-            match[1].Point(player1); // 15 - 0
-            match[1].Point(player2); // 15 - 15
-            match[1].Point(player2); // 15 - 30
-            match[1].Point(player2); // 15 - 40
-            match[1].Point(player2); // Player 2 Wins
+            match[1].Point(match[1].Player1); // 15 - 0
+            match[1].Point(match[1].Player2); // 15 - 15
+            match[1].Point(match[1].Player2); // 15 - 30
+            match[1].Point(match[1].Player2); // 15 - 40
+            match[1].Point(match[1].Player2); // Player 2 Wins
 
-            match[2].Point(player1); // 15 - 0
-            match[2].Point(player2); // 15 - 15
-            match[2].Point(player2); // 15 - 30
-            match[2].Point(player2); // 15 - 40
-            match[2].Point(player2); // Player 2 Wins
+            match[2].Point(match[2].Player1); // 15 - 0
+            match[2].Point(match[2].Player2); // 15 - 15
+            match[2].Point(match[2].Player2); // 15 - 30
+            match[2].Point(match[2].Player2); // 15 - 40
+            match[2].Point(match[2].Player2); // Player 2 Wins
 
             string expected = $"Match is not over yet";
 
@@ -203,14 +203,14 @@ namespace PadelTest
             Set mySet = new Set(3, player1, player2);
             Match match = new Match(mySet);
 
-            match[1].Point(player1); // 15 - 0
-            match[1].Point(player2); // 15 - 15
-            match[1].Point(player2); // 15 - 30
-            match[1].Point(player2); // 15 - 40
-            match[1].Point(player2); // Player 2 Wins
+            match[1].Point(match[1].Player1); // 15 - 0
+            match[1].Point(match[1].Player2); // 15 - 15
+            match[1].Point(match[1].Player2); // 15 - 30
+            match[1].Point(match[1].Player2); // 15 - 40
+            match[1].Point(match[1].Player2); // Player 2 Wins
 
-            Assert.Equal(1, player1.Score._Score);
-            Assert.Equal(4, player2.Score._Score);
+            Assert.Equal(1, match[1].Player1.Score._Score);
+            Assert.Equal(4, match[1].Player2.Score._Score);
         }
     }
 }

@@ -177,9 +177,9 @@ namespace PadelTest
             mySet[0].Point(mySet[0].Player1); // 40 - 15
             mySet[0].Point(mySet[0].Player1); // Player 1 vinner Gamet
 
-            mySet[1].Point(player1); // 15 - 0
+            mySet[1].Point(mySet[1].Player1); // 15 - 0
 
-            mySet[2].Point(player1); // 15 - 0
+            mySet[2].Point(mySet[2].Player1); // 15 - 0
 
             Assert.Equal(player1.Name, mySet[0].Winner.Name);
             Assert.Null(mySet[1].Winner);
