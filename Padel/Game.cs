@@ -13,14 +13,15 @@
         public Player Player2 => _Player2;
 
         //Added backing field and property for the winner of a game to make it easier to use the class. Will be null if unassigned.
-        private Player _Winner;
+        private Player _Winner = null;
         public Player Winner => _Winner;
 
         //Added constructor to force the assignment of initial values.
         public Game(Player player1, Player player2)
         {
-            _Player1 = player1;
-            _Player2 = player2;
+            _Player1 = new Player(player1.Name);
+            _Player2 = new Player(player2.Name);
+
         }
 
         public void Point(Player player)

@@ -15,13 +15,13 @@ namespace Padel
         //Constructor added to initialize games and players.
         public Set(int nrOfSets, Player player1, Player player2)
         {
-            this._Player1 = player1;
-            this._Player2 = player2;
+            this._Player1 = new Player(player1.Name);
+            this._Player2 = new Player(player2.Name);
 
             //Looping over the number of sets to initialize the corresponding number of games, then add the games to the list of games.
             for (int i = 0; i < nrOfSets; i++)
             {
-                Game newGame = new Game(player1, player2);
+                Game newGame = new Game(_Player1, _Player2);
                 _Games.Add(newGame);
             }
         }
@@ -43,7 +43,10 @@ namespace Padel
             for(int i = 0; i < _Games.Count; i++)
             {
                 if (_Games[i].Winner?.Name == player.Name)
+                {
                     points++;
+                    continue;
+                }
             }
             return points;
         }
