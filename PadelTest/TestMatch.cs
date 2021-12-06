@@ -39,23 +39,23 @@ namespace PadelTest
             Set mySet = new Set(3, player1, player2);
             Match match = new Match(mySet);
 
-            match[0].Point(player1); // 15 - 0
-            match[0].Point(player1); // 30 - 0
-            match[0].Point(player2); // 30 - 15
-            match[0].Point(player1); // 40 - 15
-            match[0].Point(player1); // Player 1 vinner Gamet
+            match[0].Point(match[0].Player1); // 15 - 0
+            match[0].Point(match[0].Player1); // 30 - 0
+            match[0].Point(match[0].Player2); // 30 - 15
+            match[0].Point(match[0].Player1); // 40 - 15
+            match[0].Point(match[0].Player1); // Player 1 vinner Gamet
 
-            match[1].Point(player1); // 15 - 0
-            match[1].Point(player1); // 30 - 0
-            match[1].Point(player2); // 30 - 15
-            match[1].Point(player1); // 40 - 15
-            match[1].Point(player1); // Player 1 vinner Gamet
+            match[1].Point(match[1].Player1); // 15 - 0
+            match[1].Point(match[1].Player1); // 30 - 0
+            match[1].Point(match[1].Player2); // 30 - 15
+            match[1].Point(match[1].Player1); // 40 - 15
+            match[1].Point(match[1].Player1); // Player 1 vinner Gamet
 
-            match[2].Point(player1); // 15 - 0
-            match[2].Point(player1); // 30 - 0
-            match[2].Point(player2); // 30 - 15
-            match[2].Point(player1); // 40 - 15
-            match[2].Point(player1); // Player 1 vinner Gamet
+            match[2].Point(match[2].Player1); // 15 - 0
+            match[2].Point(match[2].Player1); // 30 - 0
+            match[2].Point(match[2].Player2); // 30 - 15
+            match[2].Point(match[2].Player1); // 40 - 15
+            match[2].Point(match[2].Player1); // Player 1 vinner Gamet
 
 
             string expected = $"{player1.Name} wins 3-0";
@@ -72,23 +72,23 @@ namespace PadelTest
             Set mySet = new Set(3, player1, player2);
             Match match = new Match(mySet);
 
-            match[0].Point(player1); // 15 - 0
-            match[0].Point(player2); // 15 - 15
-            match[0].Point(player2); // 15 - 30
-            match[0].Point(player2); // 15 - 40
-            match[0].Point(player2); // Player 2 vinner Gamet
+            match[0].Point(match[0].Player1); // 15 - 0
+            match[0].Point(match[0].Player2); // 15 - 15
+            match[0].Point(match[0].Player2); // 15 - 30
+            match[0].Point(match[0].Player2); // 15 - 40
+            match[0].Point(match[0].Player2); // Player 2 vinner Gamet
 
-            match[1].Point(player1); // 15 - 0
-            match[1].Point(player2); // 15 - 15
-            match[1].Point(player2); // 15 - 30
-            match[1].Point(player2); // 15 - 40
-            match[1].Point(player2); // Player 2 vinner Gamet
+            match[1].Point(match[1].Player1); // 15 - 0
+            match[1].Point(match[1].Player2); // 15 - 15
+            match[1].Point(match[1].Player2); // 15 - 30
+            match[1].Point(match[1].Player2); // 15 - 40
+            match[1].Point(match[1].Player2); // Player 2 vinner Gamet
 
-            match[2].Point(player1); // 15 - 0
-            match[2].Point(player2); // 15 - 15
-            match[2].Point(player2); // 15 - 30
-            match[2].Point(player2); // 15 - 40
-            match[2].Point(player2); // Player 2 vinner Gamet
+            match[2].Point(match[2].Player1); // 15 - 0
+            match[2].Point(match[2].Player2); // 15 - 15
+            match[2].Point(match[2].Player2); // 15 - 30
+            match[2].Point(match[2].Player2); // 15 - 40
+            match[2].Point(match[2].Player2); // Player 2 vinner Gamet
 
 
             string expected = $"{player2.Name} wins 0-3";

@@ -28,26 +28,26 @@ namespace PadelTest
 
             Set mySet = new Set(3, player1, player2);
 
-            mySet[0].Point(player1); // 15 - 0
-            mySet[0].Point(player1); // 30 - 0
-            mySet[0].Point(player2); // 30 - 15
-            mySet[0].Point(player1); // 40 - 15
-            mySet[0].Point(player1); // Player 1 vinner Gamet
+            mySet[0].Point(mySet[0].Player1); // 15 - 0
+            mySet[0].Point(mySet[0].Player1); // 30 - 0
+            mySet[0].Point(mySet[0].Player2); // 30 - 15
+            mySet[0].Point(mySet[0].Player1); // 40 - 15
+            mySet[0].Point(mySet[0].Player1); // Player 1 vinner Gamet
 
-            mySet[1].Point(player1); // 15 - 0
-            mySet[1].Point(player1); // 30 - 0
-            mySet[1].Point(player2); // 30 - 15
-            mySet[1].Point(player1); // 40 - 15
-            mySet[1].Point(player1); // Player 1 vinner Gamet
+            mySet[1].Point(mySet[1].Player1); // 15 - 0
+            mySet[1].Point(mySet[1].Player1); // 30 - 0
+            mySet[1].Point(mySet[1].Player2); // 30 - 15
+            mySet[1].Point(mySet[1].Player1); // 40 - 15
+            mySet[1].Point(mySet[1].Player1); // Player 1 vinner Gamet
 
-            mySet[2].Point(player1); // 15 - 0
-            mySet[2].Point(player1); // 30 - 0
-            mySet[2].Point(player2); // 30 - 15
-            mySet[2].Point(player1); // 40 - 15
-            mySet[2].Point(player1); // Player 1 vinner Gamet
+            mySet[2].Point(mySet[2].Player1); // 15 - 0
+            mySet[2].Point(mySet[2].Player1); // 30 - 0
+            mySet[2].Point(mySet[2].Player2); // 30 - 15
+            mySet[2].Point(mySet[2].Player1); // 40 - 15
+            mySet[2].Point(mySet[2].Player1); // Player 1 vinner Gamet
 
-            Assert.Equal(3, mySet.Points(player1));
-            Assert.Equal(0, mySet.Points(player2));
+            Assert.Equal(3, mySet.Points(mySet[2].Player1));
+            Assert.Equal(0, mySet.Points(mySet[2].Player2));
         }
 
         [Fact]
@@ -58,40 +58,40 @@ namespace PadelTest
 
             Set mySet = new Set(5, player1, player2);
 
-            mySet[0].Point(player1); 
-            mySet[0].Point(player1); 
-            mySet[0].Point(player2); 
-            mySet[0].Point(player2); 
-            mySet[0].Point(player2);
-            mySet[0].Point(player2);
+            mySet[0].Point(mySet[0].Player1); 
+            mySet[0].Point(mySet[0].Player1); 
+            mySet[0].Point(mySet[0].Player2); 
+            mySet[0].Point(mySet[0].Player2); 
+            mySet[0].Point(mySet[0].Player2);
+            mySet[0].Point(mySet[0].Player2);
 
-            mySet[1].Point(player1); 
-            mySet[1].Point(player2); 
-            mySet[1].Point(player2); 
-            mySet[1].Point(player2); 
-            mySet[1].Point(player2); 
+            mySet[1].Point(mySet[1].Player1); 
+            mySet[1].Point(mySet[1].Player2); 
+            mySet[1].Point(mySet[1].Player2); 
+            mySet[1].Point(mySet[1].Player2); 
+            mySet[1].Point(mySet[1].Player2); 
 
-            mySet[2].Point(player1); 
-            mySet[2].Point(player2); 
-            mySet[2].Point(player2); 
-            mySet[2].Point(player2); 
-            mySet[2].Point(player2); 
+            mySet[2].Point(mySet[2].Player1); 
+            mySet[2].Point(mySet[2].Player2); 
+            mySet[2].Point(mySet[2].Player2); 
+            mySet[2].Point(mySet[2].Player2); 
+            mySet[2].Point(mySet[2].Player2); 
 
-            mySet[3].Point(player1); 
-            mySet[3].Point(player2); 
-            mySet[3].Point(player2); 
-            mySet[3].Point(player2); 
-            mySet[3].Point(player2); 
+            mySet[3].Point(mySet[3].Player1); 
+            mySet[3].Point(mySet[3].Player2); 
+            mySet[3].Point(mySet[3].Player2); 
+            mySet[3].Point(mySet[3].Player2); 
+            mySet[3].Point(mySet[3].Player2); 
 
-            mySet[4].Point(player1); 
-            mySet[4].Point(player2); 
-            mySet[4].Point(player2); 
-            mySet[4].Point(player2); 
-            mySet[4].Point(player2); 
+            mySet[4].Point(mySet[4].Player1); 
+            mySet[4].Point(mySet[4].Player2); 
+            mySet[4].Point(mySet[4].Player2); 
+            mySet[4].Point(mySet[4].Player2); 
+            mySet[4].Point(mySet[4].Player2); 
 
 
-            Assert.Equal(0, mySet.Points(player1));
-            Assert.Equal(5, mySet.Points(player2));
+            Assert.Equal(0, mySet.Points(mySet[4].Player1));
+            Assert.Equal(5, mySet.Points(mySet[4].Player2));
         }
 
         [Fact]
