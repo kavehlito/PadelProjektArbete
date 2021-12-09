@@ -42,7 +42,7 @@ namespace Padel
 
         //Previously, MatchScore() would only return a new Score.
         //Will now attempt to calculate the winner of a match and return a string of who the winner is.
-        //Something is wrong with this method since it doesn't pass all tests.
+        //Previously, this method wouldn't pass all tests
         public string MatchScore()
         {
             int pointDifference1 = Point(_Player1) - Point(_Player2);

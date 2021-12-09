@@ -170,6 +170,7 @@ namespace PadelTest
             Assert.Equal(expected, match.MatchScore());
         }
 
+        //This test would originally fail, and we had a hard time fixing the code to make it pass.
         [Fact]
         public void Match_SkippedFirstMatch_NoWinner()
         {
