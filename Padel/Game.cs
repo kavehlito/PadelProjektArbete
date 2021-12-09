@@ -1,4 +1,7 @@
-﻿namespace Padel
+﻿//PROJEKTUPPGIFT
+//MADE BY: Maria Kilsved, Kaveh Jalilyand, Louise Littecke
+
+namespace Padel
 {
 
     public class Game
